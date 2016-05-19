@@ -1,4 +1,4 @@
-var a="stern";
+var a;
 
 console.log(a);
 
