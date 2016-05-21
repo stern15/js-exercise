@@ -11,3 +11,7 @@ playerOne.showDetails = playerDetails;
 playerTwo.showDetails = playerDetails;
 
 playerOne.showDetails();
+playerTwo.showDetails();
+
+
+var doc=document.
