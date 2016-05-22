@@ -13,6 +13,10 @@ function Slides (){
     }
 }
 
-setInterval(Slides,2000);
+var intervalHandler = setInterval(Slides,2000);
+
+ImageGrab.onclick = function (){
+    clearInterval(intervalHandler);
+};
 
 
