@@ -4,7 +4,7 @@ var form = document.getElementById("frmContact");
 
 function submitFormHandler(){
     form.onsubmit = function(){
-    if (if emailVal === ""){
+    if (emailVal === ""){
         errorVal.innerHTML = "Please provide at least an email";
         return false;
     }
