@@ -12,6 +12,7 @@ function showPage(){
     };
 }
 
+
 window.onload = function(){
   showPage();
 };
