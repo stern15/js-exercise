@@ -8,7 +8,14 @@ else if(window.ActiveXObject){
 }
 myReq.onreadystatechange = function(){
     console.log("we are called");
+    console.log(myReq.readystate);
+    if (myReq.readyState===4){
+        var p = document.createElement("p");
+        var t = document.createTextNode(myReq.readyState);
+        p.appendChild(t);
+        document.getElementById("mainContent").appendChild(p);
+    }
 };
 
-myReq.open("GET","simple.txt",true);
+myReq.open('GET','simple.txt',true);
 myReq.send(null);
