@@ -1,51 +1,18 @@
+var intervalHandler;
+var seconds;
 
 
+function startCountdown(){
+    var minutes = document.getElementById("minutes").value;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    if(isNaN(minutes)){
+        alert("Pleaser enter a number");
+        return;
+    }
+    seconds = minutes * 60;
+    intervalHandler = setInterval(tick,1000);
+    document.getElementById("inputArea").style.display = "none";
+};
 
 window.onload = function(){
     var inputMin = document.createElement("input");
@@ -60,6 +27,8 @@ window.onload = function(){
     startBut.onclick = function(){
         startCountdown();
     };
+    document.getElementById("inputArea").appendChild(inputMin);
+    document.getElementById("inputArea").appendChild(startBut);
 
 };
 
