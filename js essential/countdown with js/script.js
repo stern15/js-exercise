@@ -1,6 +1,30 @@
 var intervalHandler;
-var seconds;
+var secondsRem;
 
+function resetPage(){
+    document.getElementById("inputArea").style.display = "block";
+}
+
+function tick(){
+    var timeDisplay = document.getElementById("time");
+
+    var min = Math.floor(secondsRem / 60);
+    var sec = secondsRem - (min * 60);
+
+    if(sec < 10){
+        sec = "0" + sec;
+    }
+    var message = sec +":"+ min;
+    timeDisplay.innerHTML = message;
+
+    if (secondsRem === 0){
+        alert("Done");
+        clearInterval(intervalHandler);
+        resetPage();
+    }
+    secondsRem--;
+
+}
 
 function startCountdown(){
     var minutes = document.getElementById("minutes").value;
@@ -9,10 +33,10 @@ function startCountdown(){
         alert("Pleaser enter a number");
         return;
     }
-    seconds = minutes * 60;
+    secondsRem = minutes * 60;
     intervalHandler = setInterval(tick,1000);
     document.getElementById("inputArea").style.display = "none";
-};
+}
 
 window.onload = function(){
     var inputMin = document.createElement("input");
