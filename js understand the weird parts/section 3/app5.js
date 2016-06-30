@@ -1,7 +1,7 @@
 var a;
 
-a = "hi";
+a = 0;
 
-if(a){
+if(a || a === 0){
     console.log("there is something");
 }
