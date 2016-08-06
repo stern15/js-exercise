@@ -8,3 +8,5 @@ var firstNameProp = "firstName";
 
 console.log(person);
 console.log(person[firstNameProp]);
+
+console.log(person.firstName);
