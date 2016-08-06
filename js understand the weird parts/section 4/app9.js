@@ -16,3 +16,10 @@ console.log(person.lastName);
 person.address = new Object();
 person.address.street = "111 main str.";
 person.address.city = "new york";
+person.address.state = "NY";
+person.address.year = "2011";
+
+
+console.log(person.address.city);
+console.log(person["address"]["state"]);
+console.log(person["address"]["year"]);
