@@ -11,7 +11,7 @@ var anonymousGreetings = function (){
 anonymousGreetings();
 
 function log(a){
-    console.log(a);
+    a();
 }
 
 log(function(){
