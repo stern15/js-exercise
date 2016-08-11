@@ -1,8 +1,7 @@
 function a(){
     console.log(this);
+    this.newvariable = "hello";
 }
-var b = function(){
-    console.log(this);
-};
+
 a();
-b();
+console.log(newvariable);
