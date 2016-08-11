@@ -10,15 +10,16 @@ console.log(newvariable);
 var c = {
     name:"stern",
     greetings:function(){
-            this.name="miterrand";
-            console.log(this);
+            var self = this;
+            self.name="miterrand";
+            console.log(self);
 
         var setNewName = function(newName){
-            this.name = newName;
+            self.name = newName;
         };
 
         setNewName("yvette");
-        console.log(this);
+        console.log(self);
     }
 };
 
