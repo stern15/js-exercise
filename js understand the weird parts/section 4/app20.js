@@ -13,6 +13,7 @@ var fs = buildFunction();
 fs[0]();
 fs[1]();
 fs[2]();
+console.log("--------------");
 
 
 
@@ -50,4 +51,22 @@ var fs2 = buildFunction2();
 fs2[0]();
 fs2[1]();
 fs2[2]();
+console.log("--------------");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
